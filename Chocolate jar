@@ -1,0 +1,12 @@
+def total_chocolates_for_A(N,chocolates):
+ total_A=0
+ for jar in chocolates:
+ full_cycles=jar//3
+ total_A += full_cycles
+ remaining = jar%3
+ if remaining>=1:
+ total_A+=1
+ return total_A
+N=3
+chocolates=[10,20,30]
+print(total_chocolates_for_A(N,chocolates))
